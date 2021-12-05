@@ -35,9 +35,6 @@ const escapeRoom = (room) => {
 
 
 const search = (room, row, col, searchResult) => {
-
-  numberOfIterations++;
-
   const rowInBounds = 0 <= row && row < room.length;
   const colInBounds = 0 <= col && col < room[0].length;
 
@@ -73,16 +70,12 @@ const search = (room, row, col, searchResult) => {
 const roomOfFreedom = [['s', 'o', 'o', 'o'], ['x', 'x', 'o', 'x'], ['k', 'o', 'o', 'e'], ['o', 'x', 'x', 'x']];
 const roomOfDoom = [['s', 'o', 'o', 'o'], ['x', 'o', 'o', 'o'], ['k', 'o', 'x', 'x'], ['o', 'x', 'x', 'e']];
 
-let numberOfIterations = 0;
-
 const roomFreed = escapeRoom(roomOfFreedom);
-console.log("Room Pass:", roomFreed);
-console.log("Number of iterations:", numberOfIterations);
+console.log("Room of freedom has exit?", roomFreed);
 
 console.log("");
 
-numberOfIterations = 0;
 const roomDoomed = escapeRoom(roomOfDoom);
-console.log("Room Failed:", roomDoomed);
-console.log("Number of iterations:", numberOfIterations);
+console.log("Room of doom has exit?", roomDoomed);
+
 
