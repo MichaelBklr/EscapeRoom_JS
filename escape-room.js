@@ -81,8 +81,8 @@ console.log("Number of iterations:", numberOfIterations);
 
 console.log("");
 
+numberOfIterations = 0;
 const roomDoomed = escapeRoom(roomOfDoom);
 console.log("Room Failed:", roomDoomed);
-numberOfIterations = 0;
 console.log("Number of iterations:", numberOfIterations);
 
